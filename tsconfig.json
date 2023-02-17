@@ -6,7 +6,9 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true,
+    "types": ["jest", "node", "next"],
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -14,11 +16,34 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "next-env.d.ts",
+    "next.config.js",
+    "jest.config.js",
+    "./sentry.client.config.js",
+    "./sentry.server.config.js",
+    "src/shared/lib/i18n.config.js",
+    "./next-i18next.config.js",
+    "./next-sitemap.config.js",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "build",
+    "dist",
+    "lib",
+    ".github",
+    ".next",
+    "_site",
+    "coverage",
+    "cypress",
+    "node_modules",
+    "public"
+  ]
 }

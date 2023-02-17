@@ -5,6 +5,18 @@
 /.pnp
 .pnp.js
 
+# Yarn
+yarn-error.log
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+tsconfig.build.tsbuildinfo
+
 # testing
 /coverage
 
@@ -14,10 +26,14 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
 *.pem
+.env
+tmp/
+.firebase/
 
 # debug
 npm-debug.log*
@@ -34,3 +50,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ide
+.vscode
+.idea
