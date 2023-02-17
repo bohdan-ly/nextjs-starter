@@ -12,6 +12,13 @@
     "@feature-sliced",
     "@feature-sliced/eslint-config/rules/import-order/experimental"
   ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json",

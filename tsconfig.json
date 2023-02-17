@@ -3,6 +3,8 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "declaration": true,
+    "composite": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,15 +19,16 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "paths": {}
   },
   "include": [
+    "src",
+    "general.d.ts",
     "next-env.d.ts",
     "next-env.d.ts",
     "next.config.js",
     "jest.config.js",
+    "react-app-app.d.ts",
     "./sentry.client.config.js",
     "./sentry.server.config.js",
     "src/shared/lib/i18n.config.js",

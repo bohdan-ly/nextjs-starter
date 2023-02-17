@@ -4,11 +4,12 @@ import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
 import React, { ReactElement, ReactNode } from 'react';
 
+import { Layouts } from 'app';
 import type { AppProps } from 'next/app';
 
 import 'nprogress/nprogress.css';
 // eslint-disable-next-line import/no-internal-modules
-import '../styles/globals.scss';
+import '../public/globals.scss';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -34,7 +35,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {getLayout(<Component {...pageProps} />)}
+      <Layouts withLayout={!Component.getLayout}>{getLayout(<Component {...pageProps} />)}</Layouts>
     </>
   );
 }

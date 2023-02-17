@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Header } from '..';
+// import { Footer, Header } from '..';
 
 const Layouts: React.FC<{ children: React.ReactNode; withLayout: boolean }> = ({
   children,
@@ -8,18 +8,18 @@ const Layouts: React.FC<{ children: React.ReactNode; withLayout: boolean }> = ({
   if (withLayout) {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }
 
   return (
     <React.Fragment>
-      <Header />
+      {/* <Header /> */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </React.Fragment>
   );
 };
