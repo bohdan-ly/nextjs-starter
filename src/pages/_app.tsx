@@ -1,10 +1,13 @@
 import { NextPage } from 'next';
-import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
+import React, { ReactElement, ReactNode } from 'react';
+
+import type { AppProps } from 'next/app';
+
 import 'nprogress/nprogress.css';
-import { ReactElement, ReactNode } from 'react';
+// eslint-disable-next-line import/no-internal-modules
 import '../styles/globals.scss';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
